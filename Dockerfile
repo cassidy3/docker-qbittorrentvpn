@@ -86,7 +86,7 @@ RUN apt update \
     /var/tmp/*
 
 # Install WireGuard, OpenVPN and other dependencies for running qbittorrent-nox and the container scripts
-RUN echo "deb http://deb.debian.org/debian/ unstable main" > /etc/apt/sources.list.d/unstable-wireguard.list \ 
+RUN echo "deb http://deb.debian.org/debian/ unstable main" > /etc/apt/sources.list.d/unstable-wireguard.list \
     && printf 'Package: *\nPin: release a=unstable\nPin-Priority: 150\n' > /etc/apt/preferences.d/limit-unstable \
     && apt update \
     && apt -y install --no-install-recommends \
