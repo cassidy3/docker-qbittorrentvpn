@@ -124,6 +124,7 @@ RUN echo "deb http://deb.debian.org/debian/ buster non-free" > /etc/apt/sources.
     p7zip-full \
     unzip \
     zip \
+    ln -sf /usr/sbin/iptables-legacy /usr/sbin/iptables \
     && apt-get clean \
     && apt -y autoremove \
     && rm -rf \
